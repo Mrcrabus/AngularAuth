@@ -1,0 +1,115 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-family: Inter, sans-serif;
+
+}
+
+.important label:after {
+  content: "*";
+}
+
+a {
+  text-decoration: none;
+  color: #4C54F4;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+h1 {
+  color: #101D2D;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 56px; /* 155.556% */
+  letter-spacing: -0.72px;
+}
+
+.login__login, .login__password {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.remember {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.remember > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 11px;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.checkbox:hover input ~ .checkmark {
+  background-color: #ddd;
+}
+
+.checkbox input:checked ~ .checkmark {
+  border-radius: 6px;
+  background-color: #4C54F4;
+  border: 1px solid #4C54F4;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+app-button {
+  display: flex;
+  justify-content: center;
+}

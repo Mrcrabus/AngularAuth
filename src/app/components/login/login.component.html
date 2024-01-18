@@ -1,0 +1,56 @@
+<div class="login">
+  <div>
+    <h1>Добро пожаловать</h1>
+    <p>Авторизируйтесь для продолжения</p>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="login__login important">
+      <label for="login">Логин</label>
+      <app-input
+        [inputStyle]="login.invalid && login.touched ? InputStyle.error : InputStyle.default "
+        type="text"
+        [hasError]="login.invalid && login.touched"
+        [inputType]="InputType.login"
+        placeholder="mail@simmmple.com"
+        formControlName="login"
+        id="login"
+      ></app-input>
+    </div>
+    <div class="login__password important">
+      <label for="password">Пароль</label>
+      <app-input
+        [inputStyle]="password.invalid && password.touched ? InputStyle.error : InputStyle.default"
+        [inputType]="InputType.password"
+        type="password"
+        placeholder="Минимум 8 символов"
+        formControlName="password"
+        id="password"
+      ></app-input>
+    </div>
+    <div class="remember">
+      <div>
+        <label class="checkbox" for="remember">
+          <input
+            type="checkbox"
+            formControlName="remember"
+            id="remember"
+          >
+          <span class="checkmark"></span>
+          Запомнить
+        </label>
+      </div>
+      <a routerLink="/">Забыли пароль?</a>
+    </div>
+
+
+    <app-button
+      [buttonType]="ButtonType.message"
+      [disabled]="form.invalid"
+      type="submit"
+
+    >Войти
+    </app-button>
+
+
+  </form>
+</div>

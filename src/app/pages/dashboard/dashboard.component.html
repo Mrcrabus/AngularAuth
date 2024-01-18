@@ -1,0 +1,27 @@
+<div class="dashboard">
+    <div class="profile">
+        <img class="profile__avatar" src="{{user.userAvatar}}" alt="avatar">
+        <div class="profile__info">
+            <span class="profile__username">{{user.userName}}</span>
+            <p>ID пользователя: <span> {{user.userId}}</span></p>
+        </div>
+    </div>
+    <div class="dashboard__message">
+        <p>Сообщение</p>
+        <input type="text" [formControl]="message">
+    </div>
+    <div class="dashboard__buttons">
+        <app-button [buttonType]="ButtonType.fail"
+                    (click)="openTooltip(TooltipType.fail, 'Сообщение об ошибке')">Ошибка
+        </app-button>
+        <app-button [buttonType]="ButtonType.warning"
+                    (click)="openTooltip(TooltipType.warning, 'Предупреждение сообщение')">Предупреждение
+        </app-button>
+        <app-button [buttonType]="ButtonType.success"
+                    (click)="openTooltip(TooltipType.success, 'Сообщение об успехе')">Успех
+        </app-button>
+        <app-button [buttonType]="ButtonType.message"
+                    (click)="messageTooltip()">Сообщение
+        </app-button>
+    </div>
+</div>

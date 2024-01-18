@@ -1,0 +1,43 @@
+button {
+    display: flex;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: none;
+
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.warning {
+    background-color: #FCCA00;
+    color: black;
+}
+
+.fail {
+    background-color: #FC5A5A;
+    color: white
+}
+
+.success {
+    background-color: #249F5D;
+    color: white
+}
+
+.message {
+    background-color: #4C54F4;
+    color: white
+}
+
+button:disabled {
+    background-color: rgb(128, 128, 128);
+    color: white;
+  cursor: auto;
+}
