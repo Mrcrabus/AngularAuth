@@ -10,6 +10,15 @@
     animation: 0.25s ease-in slidein;
 
 }
+.success {
+  border-left: 5px solid #249F5D;
+}
+.fail {
+  border-left: 5px solid #FC5A5A;
+}
+.warning {
+  border-left: 5px solid #FCCA00;
+}
 
 @keyframes slidein {
     0% {
