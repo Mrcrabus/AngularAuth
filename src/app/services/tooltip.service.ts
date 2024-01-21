@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {BehaviorSubject, Observable, take, timer} from "rxjs";
+import {BehaviorSubject, Observable} from "rxjs";
 
 export enum TooltipType {
   success,

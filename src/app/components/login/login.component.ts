@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from "../../services/auth.service";
-import {TooltipService, TooltipType} from "../../services/tooltip.service";
 import {UserData} from "../../models/User";
 import {ButtonType} from "../button/button.component";
 import {InputStyle, InputType} from "../input/input.component";

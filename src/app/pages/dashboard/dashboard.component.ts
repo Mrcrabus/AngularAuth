@@ -22,7 +22,6 @@ export class DashboardComponent implements OnInit {
   }
 
   public openTooltip = (type: TooltipType, message: string ) => {
-
     this.tooltipService.showTooltip(type, message)
   }
 

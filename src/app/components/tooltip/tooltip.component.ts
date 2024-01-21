@@ -39,30 +39,30 @@ export class TooltipComponent implements OnInit {
     }, 15000)
   }
 
-  // getTooltipStyle(): object {
-  //   switch (this.data.type) {
-  //     case TooltipType.success:
-  //       return {
-  //         borderLeft: '5px solid #249F5D',
-  //       };
-  //     case TooltipType.fail:
-  //       return {
-  //         borderLeft: '5px solid #FC5A5A',
-  //       };
-  //     case TooltipType.warning:
-  //       return {
-  //         borderLeft: '5px solid #FCCA00',
-  //       };
-  //     default:
-  //       return {
-  //         borderLeft: '5px solid #FCCA00',
-  //       };
-  //   }
-  // }
+  getTooltipStyle(): object {
+    switch (this.data.type) {
+      case TooltipType.success:
+        return {
+          borderLeft: '5px solid #249F5D',
+        };
+      case TooltipType.fail:
+        return {
+          borderLeft: '5px solid #FC5A5A',
+        };
+      case TooltipType.warning:
+        return {
+          borderLeft: '5px solid #FCCA00',
+        };
+      default:
+        return {
+          borderLeft: '5px solid #FCCA00',
+        };
+    }
+  }
 
-  getTooltipStyle(): string {
-    return tooltipStyle[this.data.type]
-}
+  // getTooltipStyle(): string {
+  //   return tooltipStyle[this.data.type]
+  // }
 
 
   protected readonly TooltipType = TooltipType;
